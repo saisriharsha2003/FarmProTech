@@ -1,5 +1,4 @@
-from flask import Flask, render_template, request
-from markupsafe import Markup
+from flask import Flask, render_template, request, Markup
 import pandas as pd
 from utils.fertilizer import fertilizer_dict
 import os
@@ -9,7 +8,7 @@ from keras.models import load_model
 import pickle
 
 classifier = load_model('Trained_model.h5')
-classifier.make_predict_function()
+classifier._make_predict_function()
 
 crop_recommendation_model_path = 'Crop_Recommendation.pkl'
 crop_recommendation_model = pickle.load(open(crop_recommendation_model_path, 'rb'))
@@ -145,3 +144,5 @@ def crop_prediction():
         final_prediction = my_prediction[0]
         return render_template('crop-result.html', prediction=final_prediction, pred='img/crop/'+final_prediction+'.jpg')
 
+if __name__ == '__main__':
+    app.run(debug=True)
