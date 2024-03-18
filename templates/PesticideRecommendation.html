@@ -7,33 +7,67 @@
 <li><a href="PesticideRecommendation.html" class="active">Pesticide</a></li>
 {% endblock %}
 
+
 {% block body %}
+<script>
+  function updateFileName() {
+    const fileInput = document.getElementById('file-input');
+    const fileNameSpan = document.getElementById('file-name');
+
+    if (fileInput.files.length > 0) {
+      fileNameSpan.innerText = `${fileInput.files[0].name}`;
+    } else {
+      fileNameSpan.innerText = '';
+    }
+  }
+
+</script>
+
 <br /><br />
-<h2 style="text-align: center; margin: 0px; color: black">
-  <b>Recommended pesticide based on pest</b>
+<h2 class="gold-text" style="text-align: center;color: #c79c60; margin: 0px;font-family: 'Times New Roman', Times, serif;">
+  <br>
+  <b class="typing-animation2">Pesticide Recommendation Tool</b>
 </h2>
-<h3 align="center">Please upload the picture which clearly shows the pest,<br>
-            so that we can recommend you, the pesticide accordingly!</h3>
+<div class="tm-welcome-content1" >
+  <p style="font-family: 'Times New Roman'; font-size: large">Our Pesticide Recommendation Tool is designed to help you select the 
+    most effective pesticide for your pest problem. Simply upload a clear picture showing the pest you are dealing with, and our tool
+     will recommend the best pesticide for the job.</p>
+  <p style="font-family: 'Times New Roman'; font-size: large">
+    By providing a visual of the pest, our tool can analyze the type of pest and its severity, enabling us to suggest the most 
+    appropriate pesticide for effective pest control.
+  </p>
+  <p style="font-family: 'Times New Roman'; font-size: large">
+    Using the Pesticide Recommendation Tool can help you tackle pest infestations efficiently and protect your crops from damage. 
+    Whether you're dealing with insects, fungi, or other pests, our tool can provide you with targeted recommendations to address 
+    your specific pest control needs
+  </p>
+</div>
 <br />
 
-<div
-  style="
-    width: 350px;
-    height: 40rem;
-    margin: 0px auto;
-    color: black;
-    border-radius: 25px;
-    padding: 10px 10px;
-  "
->
-    <section>
-            <form action="/predict" method="post" enctype="multipart/form-data" onsubmit="showloading()">
-                <input type="file" name="image" class="upload" style="font-size: 15px;">
-                <br>
-                <input type="submit" value="Predict" style="color: #c79c60; font-weight: bold;
-                background-color: black;
-                width: 130px; height:50px; border-radius:12px; font-size: 21px;">
-            </form>
-    </section>
-</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<div class="file-upload" >
+  <section>
+    
+    <form action="/predict" method="post" enctype="multipart/form-data" onsubmit="showloading()">
+      <div class="row" style="padding-left: 755px;">
+        <div class="col-md-1" style="width: 250px;">
+          <label for="file-input" class="file-input-label" >
+            <i class="fas fa-cloud-upload-alt"></i> Upload File
+          </label>
+          <input id="file-input" type="file" accept=".jpg, .jpeg, .png" class="upload" name="image" onchange=updateFileName() />
+        </div>
+        <div class="col-md-1">
+          <span id="file-name" class="file-name" style=" width:800px; "></span>
+  
+        </div>
+      </div>
+      <div class="row" style="padding-left: 790px; padding-top: 20px; font-weight: bold; ">
+        <input type="submit"  value="Predict" class="predict" style="align-self: center;">
+
+      </div>
+    </form>
+    
+  </section>
+</div>  
+
 {% endblock %}

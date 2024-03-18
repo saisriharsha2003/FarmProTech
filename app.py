@@ -72,10 +72,14 @@ def pred_pest(pest):
         test_image = image.load_img(pest, target_size=(64, 64))
         test_image = image.img_to_array(test_image)
         test_image = np.expand_dims(test_image, axis=0)
-        result = classifier.predict_classes(test_image)
-        return result
-    except:
+        result = classifier.predict(test_image)
+        predicted_class = np.argmax(result, axis=1)
+        return predicted_class
+    except Exception as e:
+        print(f"Error predicting pest: {e}")
+
         return 'x'
+
 
 @app.route("/")
 @app.route("/index.html")
@@ -100,6 +104,7 @@ def predict():
     if request.method == 'POST':
         file = request.files['image']  # fetch input
         filename = file.filename
+        print("filename>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+filename)
 
         file_path = os.path.join('static/user uploaded', filename)
         file.save(file_path)

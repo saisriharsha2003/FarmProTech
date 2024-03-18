@@ -8,40 +8,43 @@
 {% endblock %}
 
 {% block body %}
-<section class="tm-welcome-section">
+<section class="tm-welcome-section light-gray-bg">
     <div class="container tm-position-relative">
-      <div class="tm-lights-container">
-        <img src="{{ url_for('static', filename='img/light.png') }}" alt="Light" class="light light-1" height="188px" width="200px">
-        <img src="{{ url_for('static', filename='img/light.png') }}" alt="Light" class="light light-2" height="188px" width="200px">
-        <img src="{{ url_for('static', filename='img/light.png') }}" alt="Light" class="light light-3" height="188px" width="200px">
-        <br>
-      </div>
+      
       <div class="row tm-welcome-content">
         <br><br>
-        <h2 class="white-text tm-handwriting-font tm-welcome-header">
-          <img src="{{ url_for('static', filename='img/header-line.png') }}" alt="Line"
-            class="tm-header-line">&nbsp;Welcome To&nbsp;&nbsp;<img src="{{ url_for('static', filename='img/header-line.png') }}" alt="Line"
-            class="tm-header-line"></h2>
-        <h2 class="gold-text tm-welcome-header-2">Irrigreat</h2>
-        <p class="gray-text tm-welcome-description"><span
-            class="gold-text">Farm = AI + Crop + Fertilizer + Pesticide.</span> We take of your soil's health. We at <span class="gold-text">
-          Irrigreat</span>, honor <span
-                class="gold-text">the Indian Farmer's love, hard work and character.</span>
-          They help to feed a nation whose population is nearly 1.4 billion.
-          However their productivity is threatened by some natural factors that can ruin their crops and their livelihoods.
-          Irrigreat is a small initiative enhancing agriculture, make smart decisions to consider
-        the demographics of your field, the factors affecting your crop, as well as how to
-        keep them healthy for a super awesome yield.</p>
+        <img src="{{ url_for('static', filename='img/crop-img.jpg') }}" alt="Light" class="light light-1" height="188px" width="200px" style="border-radius: 50%">
+        <br>
+        <br>
+        <br>
+        <h2 style="font-family: 'Times New Roman'" class=" tm-welcome-header">
+         Welcome To</h2>
+        <h2 class="gold-text tm-handwriting-font1 tm-welcome-header-2 typing-animation ">FarmProTech</h2>
+        <br>
+        <br>
+        <br>
+
+        <p style="font-family: 'Times New Roman';font-size: large" class="gray-text tm-welcome-description">In the realm of farming, the equation is complex: Farming equals Artificial Intelligence, 
+          Crop management, Fertilization, and Pest control. At SoilSavers, we are dedicated to preserving and enhancing the health of your soil. 
+          We deeply respect the dedication, hard work, and character of Indian farmers.These individuals are the lifeblood of a nation with a population
+          of nearly 1.4 billion. </p>
+          <br>
+          <p style="font-family: 'Times New Roman';font-size: large" class="gray-text tm-welcome-description">However, their efforts are constantly challenged by natural forces that threaten their crops and livelihoods.
+            SoilSavers is a humble initiative aimed at revolutionizing agriculture. We empower farmers to make informed decisions by considering field 
+            demographics, crop-affecting factors, and strategies for maintaining optimal crop health, leading to exceptional yields.</p>
         <br><br><br>
       </div>
-      <img src="{{ url_for('static', filename='img/table-set.jpeg') }}" alt="Table Set" class="tm-table-set img-responsive" width="100%">
+      <img src="{{ url_for('static', filename='img/table-set.png') }}" alt="Table Set" class="tm-table-set img-responsive" width="100%">
     </div>
   </section>
-  <div class="tm-main-section light-gray-bg">
+  <div class="tm-main-section black-bg ">
     <div class="container" id="main">
       <section class="tm-section tm-section-margin-bottom-0 row">
         <div class="col-lg-12 tm-section-header-container">
-          <h2 class="tm-section-header gold-text tm-handwriting-font">Our Services</h2>
+          <div class="tm-hr-container" style="padding-right: 50px;">
+            <hr class="tm-hr">
+          </div>
+          <h2 class="tm-section-header gold-text "  style="padding-right: 10px;">Our Services</h2>
           <div class="tm-hr-container">
             <hr class="tm-hr">
           </div>
@@ -53,7 +56,7 @@
               <h3 class="tm-handwriting-font tm-popular-item-title"><span
                   class="tm-handwriting-font bigger-first-letter">C</span>rop Recommendation</h3>
               <hr class="tm-popular-item-hr">
-              <p>Which crop to grow, that is ideally suited to conditions?
+              <p style="font-family: 'Times New Roman';font-size: large">Which crop to grow, that is ideally suited to conditions?
                 Make an informed decision before starting the cultivation of crops.</p>
               <div class="order-now-container">
                 <a href="CropRecommendation.html" class="order-now-link tm-handwriting-font">Proceed Now</a>
@@ -66,7 +69,7 @@
               <h3 class="tm-handwriting-font tm-popular-item-title"><span
                   class="tm-handwriting-font bigger-first-letter">F</span>ertilizer Recommendation</h3>
               <hr class="tm-popular-item-hr">
-              <p>Which fertilizer to choose for the cultivated soil and prescribed crop for optimum production?
+              <p style="font-family: 'Times New Roman';font-size: large">Which fertilizer to choose for the cultivated soil and prescribed crop for optimum production?
               Provide your crops, the essential nutrients.</p>
               <div class="order-now-container">
                 <a href="FertilizerRecommendation.html" class="order-now-link tm-handwriting-font">Proceed Now</a>
@@ -74,12 +77,12 @@
             </div>
           </div>
           <div class="tm-popular-item">
-            <img src="{{ url_for('static', filename='img/popular-1.jpg') }}" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
+            <img src="{{ url_for('static', filename='img/popular-1.jpeg') }}" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
             <div class="tm-popular-item-description">
               <h3 class="tm-handwriting-font tm-popular-item-title"><span
                   class="tm-handwriting-font bigger-first-letter">P</span>esticide Recommendation</h3>
               <hr class="tm-popular-item-hr">
-              <p>Pests are a big threat.
+              <p style="font-family: 'Times New Roman';font-size: large">Pests are a big threat.
                 Use Irrigreat to know which pesticide to use to control pests before they cause potential damage to your
                 crop?</p>
               <div class="order-now-container">
@@ -98,7 +101,7 @@
         <div class="row margin-bottom-60">
           <nav class="col-lg-3 col-md-3 tm-footer-nav tm-footer-div">
             <h3 class="tm-footer-div-title">Our Team</h3>
-            <ul>
+            <ul style="font-family: 'Times New Roman';font-size: 14px">
               <li>Rimmalapudi Rajesh</li>
               <li>Rankela Sai Sri Harsha</li>
               <li>Busi Joseph</li>
@@ -108,43 +111,42 @@
           </nav>
           <div class="col-lg-5 col-md-5 tm-footer-div">
             <h3 class="tm-footer-div-title">Few words for our Indian Farmers</h3>
-            <p class="margin-top-15" align="justify">For this one farmer the worries are over, lie down and rest your head,
-              Your time has been and struggles enough, put the tractor in the shed.</p>
+            <div class="footer-des">
+              <p  style="font-family: 'Times New Roman';font-size: large" class="margin-top-15" align="justify">Our Indian farmers are the silent heroes who work tirelessly to ensure that food reaches our tables every day. 
+                They face numerous challenges, from unpredictable weather conditions to fluctuating market prices, yet they continue to persevere with unwavering determination. </p>
+  
+               <p style="font-family: 'Times New Roman';font-size: large" class="margin-top-15" align="justify"> Despite their crucial role, farmers often struggle with issues like inadequate access to modern technology, lack of proper irrigation facilities, and limited financial support. 
+                These challenges can make farming a daunting and uncertain profession.</p>
+  
+                <p style="font-family: 'Times New Roman';font-size: large" class="margin-top-15" align="justify">It's important for us, as a society, to recognize and appreciate the efforts of our farmers. They deserve our respect, support, and gratitude for their tireless work.
+                   By supporting our farmers, we can ensure food security for our nation and create a sustainable future for agriculture.</p>
+  
+                <p style="font-family: 'Times New Roman';font-size: large" class="margin-top-15" align="justify">As consumers, we can also play a part by choosing locally grown produce and supporting initiatives that promote fair trade practices. 
+                  Together, we can help create a more equitable and sustainable future for our farmers, ensuring that they continue to thrive and feed our nation for generations to come.
+  
+                </p>
+            </div>
 
-             <p class="margin-top-15" align="justify"> Years were not easy, many downright hard, but your faith in God transcended,
-               Put away your tools and sleep in peace. The fences have all been mended.</p>
-
-              <p class="margin-top-15" align="justify">You raised a fine family, worked the land well and always followed the Son,
-                Hang up your shovel inside of the barn; your work here on earth is done.</p>
-
-              <p class="margin-top-15" align="justify">A faith few possess led your journey through life, often a jagged and stony way,
-                The sun is setting, the cattle are all bedded, and here now is the end of your day.</p>
-
-              <p class="margin-top-15" align="justify">Your love of God’s soil has passed on to your kin; the stories flow like fine wine,
-                Wash off your work boots in the puddle left by blessed rain one final time.</p>
-
-              <p class="margin-top-15" align="justify">You always believed that the good Lord would provide and He always had somehow,
-                Take off your gloves and put them down, no more sweat and worry for you now.</p>
-
-              <p class="margin-top-15" align="justify">Your labor is done, your home now is heaven; no more must you wait,
-              Your legacy lives on, your love of the land, and we will close the gate.</p>
+              
           </div>
-          <div class="col-lg-4 col-md-4 tm-footer-div">
-            <h3 class="tm-footer-div-title">Connect With Us</h3>
-            <!-- Simran -->
+          <div class="col-lg-4 col-md-4 tm-footer-div " >
+            <h3 class="gold-text tm-footer-div-title">Connect With Us</h3>
+            <div style="font-family: 'Times New Roman';font-size: large">
+              <!-- Simran -->
             Rimmalapudi Rajesh &nbsp;
-              <a href="https://www.linkedin.com/in/simran-volunesia/" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
-              <a href="https://github.com/simranenggprojects" class="tm-social-icon"><i class="fa fa-github"></i></a>
-              <!-- Mehak -->
-            <br><br>Rankela Sai Sri Harsha &nbsp;
-              <a href="https://www.linkedin.com/in/saisriharsha2005/" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
-              <a href="https://github.com/simranenggprojects" class="tm-social-icon"><i class="fa fa-github"></i></a>
-              <br><br>Busi Joseph &nbsp;
-              <a href="https://www.linkedin.com/in/mehak-puri-9b058414b/" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
-              <a href="https://github.com/simranenggprojects" class="tm-social-icon"><i class="fa fa-github"></i></a>
-              <br><br>Varalakshmiah Duggineni &nbsp;
-              <a href="https://www.linkedin.com/in/mehak-puri-9b058414b/" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
-              <a href="https://github.com/simranenggprojects" class="tm-social-icon"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/rajesh142/" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/RimmalapudiRajesh" class="tm-social-icon"><i class="fa fa-github"></i></a>
+            <!-- Mehak -->
+          <br><br>Rankela Sai Sri Harsha &nbsp;
+            <a href="https://www.linkedin.com/in/saisriharsha2005/" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/saisriharsha2003" class="tm-social-icon"><i class="fa fa-github"></i></a>
+            <br><br>Busi Joseph &nbsp;
+            <a href="https://www.linkedin.com/in/mehak-puri-9b058414b/" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/simranenggprojects" class="tm-social-icon"><i class="fa fa-github"></i></a>
+            <br><br>Varalakshmiah Duggineni &nbsp;
+            <a href="https://www.linkedin.com/in/mehak-puri-9b058414b/" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/simranenggprojects" class="tm-social-icon"><i class="fa fa-github"></i></a>
+            </div>
             </div>
           </div>
         </div>
@@ -153,7 +155,7 @@
     <div>
       <div class="container">
         <div class="row tm-copyright">
-          <p class="col-lg-12 small copyright-text text-center">Copyright &copy; 2021 Simran & Mehak</p>
+          <p class="col-lg-12 small copyright-text text-center">Copyright &copy; 2024 Rajesh, Harsha, Joseph & Varalakshmiah</p>
         </div>
       </div>
     </div>

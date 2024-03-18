@@ -157,6 +157,8 @@ ul {
 * { font-family: 'Open Sans', sans-serif; }
 .container { max-width: 960px; }
 .tm-handwriting-font { font-family: 'Damion', cursive; }
+.tm-handwriting-font1 { font-family: 'Battambang', cursive; }
+
 .tm-top-header {
   background: black;
   color: white;
@@ -179,10 +181,10 @@ ul {
   display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 700;
-  text-transform: uppercase;  
+  text-transform: uppercase;
 }
 .tm-nav li {
   list-style: none;
@@ -193,19 +195,21 @@ ul {
   display: inline-block;
   padding: 15px 15px 20px 30px;
   -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .tm-nav li a:hover,
- .tm-nav li a:focus,
- .tm-nav li a.active {  
+.tm-nav li a:focus,
+.tm-nav li a.active {
   color: #c79c60;
   text-decoration: none;
 }
 .tm-nav li a.active {
-  background: url(../img/logo.png) no-repeat, url(../img/nav-underline.png) no-repeat;
-  background-size: 20px, 74px 17px;
-  background-position: 0% 30%, center bottom;
+  background: url(../img/logo.png) no-repeat;
+  background-size: 20px;
+  background-position: 10px 40%; /* Adjusted background-position */
+  border-bottom: 1px solid #c79c60; /* Added border-bottom */
 }
+
 .tm-top-header-inner {
   display: -webkit-box;
   display: -webkit-flex;
@@ -234,15 +238,147 @@ ul {
 .green-text { color: #30A430; }
 .tm-welcome-header { font-size: 56px; }
 .tm-welcome-header-2 {
-  font-family: 'Times New Roman', serif;
   font-size: 62px;
-  text-transform: uppercase;
 }
 .tm-welcome-content {
   margin: 150px auto 350px;
   max-width: 650px;
+  padding-bottom: 100px;
+  padding-top: -500px;
 }
-.tm-welcome-description { text-align: justify; }
+
+.file-input-label {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.predict {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-size: large;
+  color: #c79c60;
+}
+
+.file-input-label i {
+  margin-right: 10px;
+}
+
+#file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-name {
+  margin-top: 10px;
+  font-size: 14px;
+  color: black;
+}
+
+.file-upload {
+  display: flex;
+  align-items: center;
+}
+.file-input-label {
+  margin-right: 10px;
+  color: #c79c60;
+}
+.file-name {
+  color: #c79c60;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.upload {
+  display: none;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; /* Set the height of the container to 100% of the viewport height */
+}
+
+.left-half,
+.right-half {
+  flex: 1; /* Each half takes up equal space */
+  padding: 20px;
+}
+
+.left-half {
+  border-right: 1px solid #ccc; /* Add a border between the halves */
+}
+
+.form-group1 {
+  margin-bottom: 20px;
+}
+
+
+.tm-welcome-content1 {
+  margin: 60px auto 60px;
+  max-width: 800px;
+}
+.typing-animation {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #000;
+  animation: typing 4s steps(30, end) infinite;
+}
+
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 65%;
+  }
+}
+
+.typing-animation1 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #000;
+  animation: typing1 4s steps(30, end) infinite;
+}
+.typing-animation2 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #000;
+  animation: typing2 4s steps(30, end) infinite;
+}
+@keyframes typing1 {
+  from {
+      width: 0;
+  }
+  to {
+      width: 27%;
+  }
+}
+
+
+@keyframes typing2 {
+  from {
+      width: 0;
+  }
+  to {
+      width: 32%;
+  }
+}
+
+.tm-welcome-description { text-align: justify; color: #282726;font-family: 'Battambang'}
 .tm-welcome-img-container { text-align: right; }
 .tm-more-button-welcome { margin: 40px auto; }
 .tm-more-button {  
@@ -275,6 +411,7 @@ ul {
 .tm-position-relative { position: relative; }
 .tm-table-set {
   position: absolute;
+  height: 500px;
   bottom: -100px;
   left: 0;
 }
@@ -295,6 +432,8 @@ ul {
 
 /* Main content */
 .light-gray-bg { background-color: #e4e4e4; }
+.black-bg { background-color: #3c3c3c; }
+
 .tm-main-section { padding-top: 170px; }
 .img-thumbnail { padding: 8px; }
 .inline-block { display: inline-block; }
@@ -310,10 +449,15 @@ ul {
   color: white;
   padding-top: 50px;
 }
+.footer-des
+{
+  font-family: 'Damion';
+}
 .tm-footer-div-title {
-  color: white;
+  color: #c79c60;
   font-size: 21px;
   font-weight: 700;
+  
 }
 .tm-footer-nav {
   font-weight: 700;
@@ -361,6 +505,7 @@ ul {
   max-width: 294px;
   margin-top: 30px;  
   margin-bottom: 80px;
+  
 }
 .tm-popular-item-img { margin-left: 3px; }
 .tm-popular-items-container {
@@ -385,13 +530,14 @@ ul {
 }
 .tm-popular-item-title,
 .order-now-link {
-  color: rgb(174,174,174);
-  -webkit-transition: all 0.3s ease;
+  border-color: #c79c60;
+  color: #c79c60;
+    -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease;
 }
 .order-now-link {
   font-size: 24px;
-  border: 2px solid rgb(174,174,174);
+  border: 2px solid #c79c60;
   border-radius: 50%;
   width: 85px;
   height: 85px;
@@ -400,25 +546,27 @@ ul {
           transition: all 0.3s ease;
 }
 .tm-popular-item:hover { background-image: url(../img/popular-item-bg-hover.png); }
-.tm-popular-item:hover .tm-popular-item-title { color: #c79c60; }
+.tm-popular-item:hover .tm-popular-item-title { color: #a97123; }
 .tm-popular-item:hover hr {
   border-color: #c79c60;
   -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease;
 }
 .tm-popular-item:hover .order-now-link {
-  border-color: #c79c60;
-  color: #c79c60;
+  border-color: #a97123;
+  color: #a97123;
   text-decoration: none;
 }
 .tm-popular-item-title {
   font-size: 34px;
   margin-top: 0;
   margin-bottom: 0;
+  color: #c79c60;
 }
 .tm-popular-item-hr {
   margin-top: 0;
   margin-bottom: 15px;
+  
 }
 .bigger-first-letter { font-size: 60px; }
 .order-now-container {
@@ -524,7 +672,7 @@ ol li:before {
 /*http://stackoverflow.com/questions/1032914/how-to-make-a-div-to-fill-a-remaining-horizontal-space-a-very-simple-but-annoyi*/
 .tm-section-header { width: 350px; }
 .tm-hr-container {
-  width: 100%;
+  width: 600px;
   height: 41px;
 }
 .tm-hr { border-color: #c79c60; }
@@ -663,8 +811,9 @@ button.tm-more-button {
   .light { 
     width: 240px; 
     height: auto;
+    border-radius: 50%;
   }
-  .tm-footer-div { margin-bottom: 40px; }
+  .tm-footer-div { margin-bottom: 40px; font-family: 'Times New Roman';font-size: large}
   .tm-special-container { display: block; }
   .tm-special-container-left { margin-bottom: 15px; }
   .tm-special-container-lower {
@@ -712,7 +861,7 @@ button.tm-more-button {
      margin-bottom: 5px;
   }
   .tm-nav li a.active { background-position: 7% 30%, 40% bottom; }
-  .light-1, .light-2 { display: none; }
+  .light-1, .light-2 { display: none;border-radius: 50% }
   .tm-lights-container { -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
   .tm-welcome-header { font-size: 40px; }
   .tm-welcome-img-container { 
