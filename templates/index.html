@@ -12,11 +12,12 @@
     <div class="container tm-position-relative">
       
       <div class="row tm-welcome-content">
-        <br><br>
-        <img src="{{ url_for('static', filename='img/crop-img.jpg') }}" alt="Light" class="light light-1" height="188px" width="200px" style="border-radius: 50%">
-        <br>
-        <br>
-        <br>
+      
+        <div style="padding-left: 235px; padding-bottom: 80px;">
+          <img src="{{ url_for('static', filename='img/crop-img.jpg') }}" alt="Light" class="light light-1" style="border-radius: 50%;height:250px; width: 200px;">
+
+        </div>
+        
         <h2 style="font-family: 'Times New Roman'" class=" tm-welcome-header">
          Welcome To</h2>
         <h2 class="gold-text tm-handwriting-font1 tm-welcome-header-2 typing-animation ">FarmProTech</h2>
@@ -94,6 +95,71 @@
       </section>
     </div>
   </div>
+  <section class='team-section' id="team-section">
+    <div class="container">
+        <div class="team-title">
+          <h2 class="gold-text" style="text-align: center;color: #c79c60; margin: 0px;font-family: 'Times New Roman'; font-size: 35px;">
+            <br>
+            <b class="typing-animation4">Our Team</b>
+          </h2>
+        </div>
+        <div class="team-cards">
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='img/rajesh.jpeg') }} " alt="Rajesh" />
+                </div>
+                <div class="team-details">
+                    <h3>Rajesh</h3>
+                    <p>20BQ1A4247</p>
+                    <div class="social-icons">
+                      <a href="https://www.linkedin.com/in/rajesh142" target="_blank"><i class="fab fa-linkedin"></i></a>
+                      <a href="https://github.com/RimmalapudiRajesh" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='img/harsha.jpeg') }} " alt="Harsha" />
+                </div>
+                <div class="team-details">
+                    <h3>Harsha</h3>
+                    <p>20BQ1A4245</p>
+                    <div class="social-icons">
+                      <a href="https://www.linkedin.com/in/saisriharsha2005" target="_blank"><i class="fab fa-linkedin"></i></a>
+                      <a href="https://github.com/saisriharsha2003" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='img/joseph.jpeg') }} " alt="Joseph" />
+                </div>
+                <div class="team-details">
+                    <h3>Joseph</h3>
+                    <p>20BQ1A4208</p>
+                    <div class="social-icons">
+                      <a href="https://www.linkedin.com/in/busi-joseph-37a64a20b" target="_blank"><i class="fab fa-linkedin"></i></a>
+                      <a href="https://github.com/busijoseph826" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='img/vara.jpeg') }} " alt="Vara" />
+                </div>
+                <div class="team-details">
+                    <h3>Varalakshmaiah</h3>
+                    <p>20BQ1A4217</p>
+                    <div class="social-icons">
+                      <a href="https://www.linkedin.com/in/varalakshmaiahduggineni" target="_blank"><i class="fab fa-linkedin"></i></a>
+                      <a href="https://github.com/Varalakshmaiah28" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <footer>
     <div class="tm-black-bg">
@@ -134,18 +200,18 @@
             <div style="font-family: 'Times New Roman';font-size: large">
               <!-- Simran -->
             Rimmalapudi Rajesh &nbsp;
-            <a href="https://www.linkedin.com/in/rajesh142/" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/RimmalapudiRajesh" class="tm-social-icon"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/rajesh142" target="_blank" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/RimmalapudiRajesh" target="_blank" class="tm-social-icon"><i class="fa fa-github"></i></a>
             <!-- Mehak -->
           <br><br>Rankela Sai Sri Harsha &nbsp;
-            <a href="https://www.linkedin.com/in/saisriharsha2005/" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/saisriharsha2003" class="tm-social-icon"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/saisriharsha2005"  target="_blank" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/saisriharsha2003" target="_blank" class="tm-social-icon"><i class="fa fa-github"></i></a>
             <br><br>Busi Joseph &nbsp;
-            <a href="https://www.linkedin.com/in/mehak-puri-9b058414b/" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/simranenggprojects" class="tm-social-icon"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/busi-joseph-37a64a20b" target="_blank" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/busijoseph826" target="_blank" class="tm-social-icon"><i class="fa fa-github"></i></a>
             <br><br>Varalakshmiah Duggineni &nbsp;
-            <a href="https://www.linkedin.com/in/mehak-puri-9b058414b/" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/simranenggprojects" class="tm-social-icon"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/varalakshmaiahduggineni" target="_blank" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/Varalakshmaiah28" target="_blank" class="tm-social-icon"><i class="fa fa-github"></i></a>
             </div>
             </div>
           </div>
