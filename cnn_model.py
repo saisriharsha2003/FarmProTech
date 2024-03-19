@@ -5,6 +5,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 # Initialing the CNN
 classifier = Sequential()
 
+
 # Step 1 - Convolution Layer
 classifier.add(Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)))
 
