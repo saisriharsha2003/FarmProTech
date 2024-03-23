@@ -12,6 +12,9 @@
 <h1 class="text-center" style="margin-top:5%;">
     <b>You should grow <span class="gold-text"><i> {{ prediction }} </i></span>in your farm</b>
     <br><br>
-    <img src="{{url_for('static',filename=pred)}}" width="780px" height="450px" alt={{prediction}}>
+    <div class="text-center" style="margin: 5%;">
+        <img src="{{url_for('static',filename=pred)}}" width="1000px" height="1000px" alt={{prediction}} style="justify-content: center; padding-left: 330px;">
+
+    </div>
 </h1>
 {% endblock %}
